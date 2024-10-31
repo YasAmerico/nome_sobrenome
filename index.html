@@ -1,0 +1,68 @@
+<html>
+<head> 
+    <title>Login</title>        
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, red, rgb(112, 56, 202) );
+        }
+        
+        div {
+            background-color: rgba(110, 39, 39, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 50px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        button{
+            background-color: rgb(122, 45, 81); 
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+        }
+
+        button:hover{
+            background-color: #2b1117;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" id="nome" class="input" placeholder="Nome">
+        <br><br>
+        <input type="text" id="sobrenome" class="input" placeholder="Sobrenome">
+        <br><br>
+        <button id="primeiro" onclick="validarLogin()">Enviar</button>
+    </div>
+
+    <script>
+        function validarLogin() {
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+
+            if (nome === '' || sobrenome === '') {
+                alert('Por favor, preencha todos os campos.');
+            } else {
+                alert(`Bem-vindo, ${nome} ${sobrenome}!`);
+            }
+        }
+    </script>
+</body>
+</html>
